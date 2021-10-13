@@ -7,17 +7,17 @@ namespace HW1_DI.Models
 {
     public class EmailSenders : IEmailSender
     {
-        public void SendMessage(Guid guid)
+        public void SendMessage()
         {
-            Console.WriteLine($"Email has been sent to {guid}");
+            Console.WriteLine($"Email has been sent");
         }
     }
 
     public class SMSSender : ISMSSender
     {
-        public void SendMessage(Guid guid)
+        public void SendMessage()
         {
-            Console.WriteLine($"SMS has been sent to {guid}");
+            Console.WriteLine($"SMS has been sent");
         }
     }
 }

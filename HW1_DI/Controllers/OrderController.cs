@@ -36,7 +36,7 @@ namespace HW1_DI.Controllers
                 orderService.Add(order.order[0]);
                 //dbService.Add ... db operations
                 // ...
-                smsSender.SendMessage(guid.Guid);
+                smsSender.SendMessage();
                 return Ok();
             }
             return BadRequest(ModelState);

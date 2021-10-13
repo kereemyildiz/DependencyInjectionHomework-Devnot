@@ -29,9 +29,9 @@ namespace HW1_DI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IUserGuidGenerator, User>(); // I do this to act program new user logs in each time program run.
-            services.AddTransient<ISMSSender, SMSSender>();
-            services.AddScoped<ICreditCardService, CreditCardService>();
-            services.AddSingleton<IOrderDbService, OrderDbService>(); // db assumed as InMemory Database. Therefore it is singleton
+            services.AddSingleton<ISMSSender, SMSSender>();
+            services.AddTransient<ICreditCardService, CreditCardService>();
+            services.AddScoped<IOrderDbService, OrderDbService>(); // db assumed as InMemory Database. Therefore it is singleton
             services.AddScoped<IOrderService, OrderService>();  
             services.AddControllers();
             services.AddSwaggerGen(c =>
